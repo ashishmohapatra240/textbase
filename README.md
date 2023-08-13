@@ -80,5 +80,5 @@ jupyter notebook
 ## Datasets
 The datasets utilized in this project are present in the repository. They include:
 - `drug200.csv`: Contains patient health metrics and corresponding drug prescriptions.
-- `improved_conversations.csv`: The enhanced conversational dataset for fine-tuning the GPT-2 model.
+- `improved_conversations_1000.csv`: The enhanced conversational dataset for fine-tuning the GPT-2 model.
 
