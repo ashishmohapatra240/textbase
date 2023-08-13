@@ -7,6 +7,8 @@ In the rapidly evolving world of healthcare, precision and accuracy in drug reco
 
 2. Conversational AI Interface: Beyond just data processing, this chatbot shines in its user interactions. It leverages the prowess of the GPT-2 model, fine-tuned with an enriched dataset, to converse in a manner reminiscent of seasoned healthcare professionals. This ensures users, whether they be doctors, pharmacists, or curious individuals, have a seamless and insightful interaction.
 
+   Watch Demo: https://www.youtube.com/watch?v=MMNmpVLN_O4
+
 
 ## Table of Contents
 - [Motivation](#motivation)
