@@ -1,43 +1,84 @@
-# Textbase
+# Textbase AI Chatbot for Drug Recommendations
 
-✨ Textbase is a framework for building chatbots using NLP and ML. ✨
+## Overview
+In the rapidly evolving world of healthcare, precision and accuracy in drug recommendations are paramount. This repository presents an advanced AI chatbot meticulously designed to assist in this critical domain. Here's a deeper dive into its architecture and capabilities:
 
-Just implement the `on_message` function in `main.py` and Textbase will take care of the rest :)
+1. Integrated Machine Learning Model: At the core of this chatbot lies a machine learning model trained on patient health metrics. It assimilates details such as age, gender, blood pressure, cholesterol levels, and sodium-to-potassium ratios to generate an apt drug recommendation. The choice of the K-Nearest Neighbors (KNN) algorithm ensures that the model can accurately consider the multi-dimensionality of patient data and offer tailored drug suggestions.
 
-Since it is just Python you can use whatever models, libraries, vector databases and APIs you want.
+2. Conversational AI Interface: Beyond just data processing, this chatbot shines in its user interactions. It leverages the prowess of the GPT-2 model, fine-tuned with an enriched dataset, to converse in a manner reminiscent of seasoned healthcare professionals. This ensures users, whether they be doctors, pharmacists, or curious individuals, have a seamless and insightful interaction.
 
-_Coming soon:_
 
-- [ ] PyPI package
-- [ ] SMS integration
-- [ ] Easy web deployment via `textbase deploy`
-- [ ] Native integration of other models (Claude, Llama, ...)
+## Table of Contents
+- [Motivation](#motivation)
+- [Algorithm Selection](#algorithm-selection)
+- [Enhancing Conversational Dataset](#enhancing-conversational-dataset)
+- [Fine-tuning with GPT-2](#fine-tuning-with-gpt-2)
+- [Getting Started](#getting-started)
+- [Datasets](#datasets)
 
-## Installation
 
-Clone the repository and install the dependencies using [Poetry](https://python-poetry.org/) (you might have to [install Poetry](https://python-poetry.org/docs/#installation) first).
+## Motivation
+Choosing the right medication for a patient based on their health metrics is crucial. With the myriad of drugs available, making the correct decision can be challenging. This project aims to aid healthcare professionals by offering a chatbot that can suggest appropriate drugs, ensuring the best patient care.
 
-```bash
-git clone https://github.com/cofactoryai/textbase
+## Algorithm Selection
+The initial recommendation model used was based on Random Forest. However, to achieve higher accuracy and precision, the K-Nearest Neighbors (KNN) algorithm was selected. KNN's ability to effectively handle multi-class classification problems and its simplicity made it a suitable choice for this dataset.
+
+## Enhancing Conversational Dataset
+The base conversational dataset was improved by diversifying the bot's responses. This ensures the chatbot sounds more human-like, leading to a better user experience. The dataset was augmented to include a wider range of phrasings and patterns, catering to various user inputs.
+
+## Fine-tuning with GPT-2
+To boost the chatbot's conversational capabilities, the GPT-2 model was fine-tuned with the enhanced dataset. This ensures that the chatbot can handle a broad spectrum of user queries, even those not explicitly present in the training data.
+
+## Getting Started
+
+### Prerequisites
+- **Python 3.8**
+- **PIP**
+- **Jupyter Notebook or Jupyter Lab**
+- **Git (for cloning the repository)**
+
+### Installation
+
+1. **Clone the Repository**:
+
+```
+git clone https://github.com/ashishmohapatra240/textbase.git
 cd textbase
-poetry shell
-poetry install
 ```
 
-## Start development server
+2. Set Up a Virtual Environment (Recommended):
+```
+python -m venv venv
+source venv/bin/activate
+```
+3. Install Required Libraries:
 
-> If you're using the default template, **remember to set the OpenAI API key** in `main.py`.
-
-Run the following command:
-
-```bash
-poetry run python textbase/textbase_cli.py test main.py
+```
+pip install -r requirements.txt
 ```
 
-Now go to [http://localhost:4000](http://localhost:4000) and start chatting with your bot! The bot will automatically reload when you change the code.
+4. **Download and Place the Models**:
+- Download the models from [this link](https://drive.google.com/drive/folders/1w6RQl4GRhf6TltuPJsAnIN9TKOM6YlZA?usp=sharing).
+- Extract and place the `models` folder in the root directory of the project.
 
-_Simpler version using PyPI package and CLI coming soon!_
+5. Run the Chatbot:
 
-## Contributions
+```
+Run the Chatbot:
+```
 
-Contributions are welcome! Please open an issue or a pull request.
+6. **Run the Notebook on Jupyter or Colab**:
+
+If you have Jupyter Notebook or Jupyter Lab installed, navigate to the project directory and run:
+
+```
+jupyter notebook
+```
+
+
+
+## Datasets
+The datasets utilized in this project are present in the repository. They include:
+- `drug200.csv`: Contains patient health metrics and corresponding drug prescriptions.
+- `improved_conversations.csv`: The enhanced conversational dataset for fine-tuning the GPT-2 model.
+
